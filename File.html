@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Homework
+        </title>
+        <style>
+            body {
+                background-color: beige;
+                
+              
+            }
+            .container {
+            display:inline-block;
+            cursor:pointer;
+            margin-top:10px;
+            margin-left:450px;
+            }
+            .text-box {
+                padding-top:10px;
+                padding-bottom:10px;
+                padding-left:10px;
+                padding-right:10px;
+                color:black;
+                cursor:pointer;
+                border-radius: 20px;
+                border:solid;
+            }
+            .button {
+                margin-top:20px;
+                font-family: 'Courier New', Courier, monospace;
+                color:dark;
+                background-color: antiquewhite;
+                font-size:30px;
+                padding-top:10px;
+                padding-bottom:10px;
+                padding-right:10px;
+                padding-left:10px;
+                transition: opacity 0.15s;
+                cursor:pointer;
+                
+            }
+            .button:hover {
+                opacity:0.9;
+            }
+            .button:active {
+                opacity:0.3;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <input id="text" type="text" placeholder="Enter your email here" class="text-box">
+            <br>
+            <button onclick="validate()" class="button">
+                Submit
+            </button>
+
+        </div>
+
+        
+
+
+
+    </body>
+    <script>
+        function validate() {
+            var mail = document.getElementById("text").value;
+            var regx = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/
+            // const result = regx.test("example");
+
+            if(regx.test(mail)) {
+                alert("You have provided a valid Email");
+                return true;
+            }
+            else {
+                alert("Sorry! Incorerct Email");
+                return false;
+            }
+           
+        }
+
+    </script>
+</html>
